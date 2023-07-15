@@ -1,0 +1,20 @@
+Flag explanation
+
+-I : 파일에서 #include <spdlog/spdlog.h> 할 때 spdlog.h를 찾을 경로 추가
+    예 : g++ -c main.cpp -I [A] -I[B]
+    설명 :main.cpp 에서 #include <spdlog/spdlog.h> 할 때 spdlog/spdlog.h 파일을 디폴트 위치와 추가적으로 A와 B 디렉토리를 디렉토리에서 찾는다.
+        디폴트 include 디렉토리 
+            -usr/include
+            -usr/local/include
+
+-L : 링킹을 할 .a, .so 파일을 찾을 경로 추가
+    예 : g++ main.o -o main -L [A]
+    설명 : A 디렉토리에서 링킹을 할 .a, .so 파일을 찾는다.
+    주의 : 링크 파일을 찾을 경로를 추가해주는 것이지 링크 파일을 명시해주는게 아니다.(링크 파일 명시하는 법은 -l 플래그 참조)
+
+
+-l[library file name] : 해당 파일을 링킹한다
+    예 : g++ main.o -o main -L./lib/ -lNetworkLibrary
+    설명 : 
+        -lNetworkLibrary : libNetworkLibrary 파일을 링킹한다.
+        -L./lib/ : 링크할 파일을 찾을 때 Makefile이 있는 디렉토리에서 ./lib/ 디렉토리에서도 찾는다.
