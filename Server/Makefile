@@ -19,13 +19,17 @@ EXECTUABLE_OUTPUT_DIR = ../output
 
 # Include 디렉토리
 INCLUDE_DIR =-I../3rdParty/ -I../NetworkLibrary/src/
+#INCLUDE_DIR =-I/home/user/projects/cliontest/cpp_linux_server/3rdParty/ -I../NetworkLibrary/src/
 #INCLUDE_DIR =
 
-# 링커 옵션
-LINK_PATH = -L../NetworkLibrary/lib/
+# 링킹할 커스텀 lib 파일의 위치
+CUSTOM_LINK_PATH = -L../NetworkLibrary/lib/
 
-# 링크할 파일
-FILE_TO_LINK = -lNetworkLibrary
+# 링킹할 커스텀 lib 파일 이름
+CUSTOM_LIB_TO_LINK = -lNetworkLibrary
+
+# 다운로드 받은 lib 파일 중 링크할 파일
+LIB_FILE_TO_LINK = -lodbc -lpqxx -lpulsarwithdeps
 
 # SRC_DIR 디렉토리 안에 디렉토리들 제외하고(notdir) .cpp 파일들의 이름만 가져온다.
 # 예 : src/maincpp => main.cpp
@@ -48,10 +52,10 @@ TARGET = main
 #	   Build Pipeline       #
 #============================
 $(OBJ_DIR)/%.o : $(SRC_DIR)/%.cpp
-	$(CC) $(CXXFLAGS) -c $< -o $@ -MD $(LINK_PATH) $(INCLUDE_DIR)
+	$(CC) $(CXXFLAGS) -c $< -o $@ -MD $(CUSTOM_LINK_PATH) $(INCLUDE_DIR)
 
-$(TARGET) : $(OBJS_W_OBJ_DIR)
-	$(CC) $(CXXFLAGS) $(OBJS_W_OBJ_DIR) -o $(EXECTUABLE_OUTPUT_DIR)/$(TARGET) $(LINK_PATH) $(FILE_TO_LINK) 
+build : $(OBJS_W_OBJ_DIR)
+	$(CC) $(CXXFLAGS) $(OBJS_W_OBJ_DIR) -o $(EXECTUABLE_OUTPUT_DIR)/$(TARGET) $(CUSTOM_LINK_PATH) $(CUSTOM_LIB_TO_LINK) $(LIB_FILE_TO_LINK)
 
 .PHONY: clean all
 

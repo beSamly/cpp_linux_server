@@ -281,4 +281,48 @@ obj/ServerApp.o: src/ServerApp.cpp /usr/include/stdc-predef.h src/pch.h \
  ../3rdParty/spdlog/version.h \
  ../3rdParty/spdlog/details/synchronous_factory.h \
  ../3rdParty/spdlog/spdlog-inl.h src/Session.h \
- ../NetworkLibrary/src/AsioSession.h
+ ../NetworkLibrary/src/AsioSession.h src/DBConnection.h \
+ /usr/include/sql.h /usr/include/sqltypes.h /usr/include/sqlext.h \
+ /usr/include/sqlucode.h src/PostgresDB.h src/PulsarClient.h \
+ /usr/include/pulsar/Client.h /usr/include/pulsar/ClientConfiguration.h \
+ /usr/include/pulsar/Authentication.h /usr/include/pulsar/Result.h \
+ /usr/include/pulsar/defines.h /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h /usr/include/pulsar/Logger.h \
+ /usr/include/pulsar/ConsoleLoggerFactory.h \
+ /usr/include/pulsar/Consumer.h /usr/include/pulsar/BrokerConsumerStats.h \
+ /usr/include/pulsar/ConsumerType.h /usr/include/c++/11/iostream \
+ /usr/include/c++/11/ostream /usr/include/c++/11/ios \
+ /usr/include/c++/11/bits/basic_ios.h \
+ /usr/include/c++/11/bits/basic_ios.tcc \
+ /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
+ /usr/include/c++/11/bits/istream.tcc \
+ /usr/include/pulsar/ConsumerConfiguration.h \
+ /usr/include/pulsar/ConsumerCryptoFailureAction.h \
+ /usr/include/pulsar/ConsumerEventListener.h \
+ /usr/include/pulsar/ConsumerInterceptor.h /usr/include/pulsar/Message.h \
+ /usr/include/pulsar/KeyValue.h /usr/include/pulsar/Schema.h \
+ /usr/include/pulsar/defines.h /usr/include/pulsar/MessageId.h \
+ /usr/include/c++/11/set /usr/include/c++/11/bits/stl_set.h \
+ /usr/include/c++/11/bits/stl_multiset.h \
+ /usr/include/pulsar/CryptoKeyReader.h \
+ /usr/include/pulsar/EncryptionKeyInfo.h \
+ /usr/include/pulsar/InitialPosition.h \
+ /usr/include/pulsar/KeySharedPolicy.h \
+ /usr/include/pulsar/RegexSubscriptionMode.h \
+ /usr/include/pulsar/TypedMessage.h \
+ /usr/include/pulsar/BatchReceivePolicy.h \
+ /usr/include/pulsar/DeadLetterPolicy.h \
+ /usr/include/pulsar/FileLoggerFactory.h \
+ /usr/include/pulsar/MessageBuilder.h /usr/include/pulsar/KeyValue.h \
+ /usr/include/pulsar/Producer.h \
+ /usr/include/pulsar/ProducerConfiguration.h \
+ /usr/include/pulsar/CompressionType.h \
+ /usr/include/pulsar/MessageRoutingPolicy.h \
+ /usr/include/pulsar/DeprecatedException.h \
+ /usr/include/pulsar/TopicMetadata.h \
+ /usr/include/pulsar/ProducerCryptoFailureAction.h \
+ /usr/include/pulsar/ProducerInterceptor.h /usr/include/pulsar/Reader.h \
+ /usr/include/pulsar/ReaderConfiguration.h \
+ /usr/include/pulsar/TableView.h \
+ /usr/include/pulsar/TableViewConfiguration.h
